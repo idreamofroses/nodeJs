@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Postage Calculator</title>
+    <script>
+        function isPostcard() {
+            var type = document.getElementById("type").value;
+            if(type == "Postcard") {
+                document.getElementById("weight").disabled = true;
+                document.getElementById("weight").value = "0.22";
+            } else {
+                document.getElementById("weight").disabled = false;
+                document.getElementById("weight").value = "";
+            }
+        }
+    </script>
+</head>
+<body>
+	<h1>Postage Calculator</h1>
+	<form action="/getRate" method="get">
+        <label>Mail Type: </label>
+		<select id="type" name="type" onchange="isPostcard();">
+			<option>Letters (Stamped)</option>
+			<option>Letters (Metered)</option>
+			<option>Large Envelopes (Flats) </option>
+			<option>Parcels</option>
+            <option>Postcard</option>
+		</select>
+        <br/>
+        <br/>
+
+        <label>Weight: </label>
+		<input type="text" name="weight" id="weight" required>
+		<label>ounces</label>
+
+		<br><br>
+		<input type="submit" value="Get Price">
+
+	</form>
+</body>
+</html>

@@ -15,6 +15,7 @@ app.get('/', function(request, response) {
 });
 
 app.get('/getRate', function(request, response) {
+    console.log("here");
   calculateRate(request, response);
 });
 
@@ -25,6 +26,7 @@ app.listen(app.get('port'), function() {
 function calculateRate(request, response) {
 	var requestUrl = url.parse(request.url, true);
 
+    console.log("Requested:" + requestUrl);
 	console.log("Query parameters: " + JSON.stringify(requestUrl.query));
 
 

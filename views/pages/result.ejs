@@ -2,11 +2,39 @@
 <html>
 <head>
 	<title>Postage Price</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+    <!-- My css -->
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-	<h1>Postage Price</h1>
-	<p>Postage Type: <%= type %> <br/>
-        Postage Weight: <%= weight %> <br/>
-        <b> Price: <%= price %> </b></p>
+<body class="bg-warning">
+    <div class="container bg-success">
+    <div class="row">
+        <header class="col-xs-12 border-dashed border-color-black">
+	       <h1 class="text-center">Postage Price</h1>
+        </header>
+    </div>
+    </div>
+    
+    <div class="container">
+    <div class="form-group row">
+        <br/>
+        <br/>
+	   <label class="col-xs-4 col-form-label col-sm-push-5">Postage Type: <%= type %> </label>
+    </div>
+    <div class="form-group row">
+        <label class="col-xs-4 col-form-label col-sm-push-5">Postage Weight: <%= weight %> </label>
+    </div>
+    <div class="form-group row">
+        <label class="col-xs-4 col-form-label col-sm-push-5"> Price: <%= price %> </label>
+    </div>
+        
+    <div class="form-group row col-xs-5 col-sm-push-4">
+    <a href="form.html" class="btn btn-default btn-lg btn-block text-success">Calculate Again</a>
+    </div>
+    </div>
 </body>
 </html>
